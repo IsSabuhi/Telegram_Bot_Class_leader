@@ -6,6 +6,6 @@ from data.config import admin_id
 async def on_startup_notify(dp: Dispatcher):
     for admin in admin_id:
         try:
-            await dp.bot.send_message(chat_id=admin, text="Бот запущен")
+            await dp.bot.send_message(chat_id=admin, text="Starting Bot")
         except Exception as err:
             logging.exception(err)
